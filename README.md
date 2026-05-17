@@ -17,7 +17,8 @@ O objetivo é aplicar conceitos de:
 ## Estrutura do Repositório
 
 ```text
-projetos/
+projetos
+|exercicios-python
 README.md
 index.html
 ```
@@ -41,4 +42,5 @@ Desenvolvido por Miguel Thiago Rodrigues Nascimento Nery
 
 ## GitHub Pages
 
-A página do projeto será publicada utilizando GitHub Pages.
+A página do projeto está publicada. Segue o link abaixo:
+https://miguelnnery.github.io/PortfolioHub/
