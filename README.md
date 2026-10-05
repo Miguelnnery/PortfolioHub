@@ -18,7 +18,7 @@ O objetivo é apresentar:
 
 ```text
 projetos
-|exercicios-python
+exercicios-python
 README.md
 index.html
 ```
