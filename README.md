@@ -17,8 +17,11 @@ O objetivo é apresentar:
 ## Estrutura do Repositório
 
 ```text
-projetos
-exercicios-python
+projetos (em python)
+design-thinking
+heuristicas-nielsen
+modelo-pedidos
+wcag-cores
 README.md
 index.html
 ```
@@ -43,5 +46,5 @@ Desenvolvido por Miguel Thiago Rodrigues Nascimento Nery
 
 ## GitHub Pages
 
-A página do projeto está publicada. Segue o link abaixo:
+Meu site está publicada. Segue o link:
 https://miguelnnery.github.io/PortfolioHub/
