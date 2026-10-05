@@ -12,18 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400..700&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================================
-           CORES E MEDIDAS
-           Para mudar o visual do site inteiro, mexa só aqui.
-           ============================================================ */
-        :root {
-            --board:  #EEF1F7;   /* fundo da página */
-            --dot:    #C6CDE0;   /* pontinhos do quadro */
-            --ink:    #1B1F3B;   /* texto principal */
-            --muted:  #4A4F72;   /* texto secundário */
-            --accent: #3B4BF0;   /* foco do teclado */
 
-            --note-ink: #1B1F3B; /* texto dentro das notas (sempre escuro) */
+        :root {
+            --board:  #EEF1F7;   
+            --dot:    #C6CDE0;   
+            --ink:    #1B1F3B;
+            --muted:  #4A4F72;   
+            --accent: #3B4BF0;   
+
+            --note-ink: #1B1F3B; 
 
             --shadow:    0 1px 1px rgba(27,31,59,.12), 0 8px 18px -6px rgba(27,31,59,.28);
             --shadow-up: 0 2px 2px rgba(27,31,59,.12), 0 18px 30px -8px rgba(27,31,59,.38);
@@ -47,9 +44,7 @@
             }
         }
 
-        /* ============================================================
-           BASE
-           ============================================================ */
+        
         *, *::before, *::after { box-sizing: border-box; }
         * { margin: 0; }
 
@@ -77,9 +72,7 @@
             padding: clamp(28px, 5vw, 64px) clamp(20px, 4vw, 40px) 40px;
         }
 
-        /* ============================================================
-           APRESENTAÇÃO
-           ============================================================ */
+       
         .hero {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -97,7 +90,7 @@
             box-shadow: var(--shadow-up);
         }
 
-        /* fita adesiva */
+        
         .polaroid::before {
             content: "";
             position: absolute;
@@ -181,12 +174,7 @@
             color: var(--board);
         }
 
-        /* ============================================================
-           QUADRO DE PROJETOS
-           Cada projeto vira uma nota. Cor e inclinação são
-           automáticas pela posição: não precisa mexer em nada aqui
-           quando adicionar projetos novos.
-           ============================================================ */
+    
         .board h2 {
             margin-bottom: clamp(26px, 4vw, 44px);
             font-family: var(--font-display);
@@ -225,13 +213,13 @@
             animation-delay: calc(min(var(--i, 0), 10) * 70ms + 150ms);
         }
 
-        /* inclinações */
+
         .note:nth-child(4n+1) { --tilt: -1.3deg; }
         .note:nth-child(4n+2) { --tilt:  .9deg; }
         .note:nth-child(4n+3) { --tilt: -.5deg; }
         .note:nth-child(4n+4) { --tilt: 1.5deg; }
 
-        /* cores */
+
         .note:nth-child(6n+1) { --paper: #FFE27A; }
         .note:nth-child(6n+2) { --paper: #FFB5CF; }
         .note:nth-child(6n+3) { --paper: #A6E7C6; }
@@ -274,7 +262,7 @@
             text-underline-offset: 4px;
         }
 
-        /* o link cobre a nota inteira, então ela toda é clicável */
+  
         .note .open::after {
             content: "";
             position: absolute;
@@ -297,9 +285,7 @@
             }
         }
 
-        /* ============================================================
-           RODAPÉ
-           ============================================================ */
+ 
         footer {
             margin-top: clamp(64px, 10vw, 120px);
             padding-top: 20px;
@@ -308,9 +294,7 @@
             font-size: .9rem;
         }
 
-        /* ============================================================
-           TELAS PEQUENAS
-           ============================================================ */
+
         @media (max-width: 720px) {
             .hero { grid-template-columns: 1fr; gap: 40px; }
             .polaroid { margin-left: 8px; }
@@ -364,19 +348,7 @@
     </div>
 
     <script>
-        /* ============================================================
-           COMO ADICIONAR UM PROJETO NOVO
-           Copie uma linha da lista abaixo, cole no final (antes do ]) e
-           troque os textos. Pronto: a nota aparece sozinha, com cor e
-           inclinação próprias.
 
-             titulo     nome do projeto
-             descricao  uma ou duas frases sobre ele
-             link       pasta ou endereço do projeto (ex.: "minha-pasta/")
-                        Deixe fora a linha "link" e a nota aparece como "Em breve".
-             novaAba    opcional: true para abrir o projeto em outra aba
-                        (links que começam com http já abrem em outra aba)
-           ============================================================ */
         const PROJETOS = [
             { titulo: "Design Thinking",       descricao: "Estudo e prática das etapas do Design Thinking.",           link: "design-thinking/" },
             { titulo: "Estudos Acadêmicos",    descricao: "Projetos e conteúdos desenvolvidos durante os estudos." },
@@ -385,9 +357,6 @@
             { titulo: "WCAG e Cores",          descricao: "Acessibilidade na web: diretrizes WCAG e contraste de cores.", link: "wcag-cores/" },
         ];
 
-        /* ------------------------------------------------------------
-           Daqui para baixo não precisa mexer.
-           ------------------------------------------------------------ */
         const lista = document.getElementById("projetos");
         lista.textContent = "";
 
