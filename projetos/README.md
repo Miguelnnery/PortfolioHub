@@ -4,6 +4,7 @@ Esta pasta contém projetos acadêmicos e pessoais desenvolvidos durante meus es
 
 ## Projetos atuais
 
-- Página Web de Portfólio
-- Exercícios de Programação
+- Banco de Dados ORACLE-SQL
+- Exercícios de Programação em Python
 - Estudos Acadêmicos
+- Páginas desenvolvidas em HTML E CSS
