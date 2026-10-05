@@ -1,14 +1,3 @@
-/*
-BD2 - 2o Bim -Atividade de SQL - Exerc�cios de DDL - Tabelas do Projeto Pedido - Parte 1
-Queries implementadas na linguagem SQL aplicadas no SGBDR Oracle, apoiadas no
-SqlDeveloper. Utilizar o MER F�sico e BD Pedido disponibilizado para treinamento da disciplina
-de Banco de Dados.
-1) Implementar o script DDL para criar as tabelas do BD de pedidos: CLIENTE, PF, PJ,
-PRODUTO, VENDEDOR, FONE_CLIENTE, FONE_VENDEDOR e PRATELEIRA.
-Colocar as regras de integridade b�sica no script de cria��o. Substituir todos os tipos de
-dados INTEGER que est�o no modelo por NUMBER.
-*/
-
 DROP TABLE Cliente CASCADE CONSTRAINT;
 
 
@@ -90,23 +79,6 @@ NUMERO_SECOES   NUMBER(2)          NOT NULL
 );
 
 
-
-/*
-BD2 - 2� Bim - Atividade de SQL - Exerc�cios de DDL - Tabelas do Projeto Pedido - Parte 2
-
-Queries implementadas na linguagem SQL aplicadas no SGBDR Oracle, apoiadas no
-SqlDeveloper. Utilizar o MER F�sico e BD Pedido disponibilizado para treinamento
-da disciplina de Banco de Dados.
-
-1) Criar as tabelas associativas: PEDIDO, ESTOQUE, CAPACIDADE_ESTOQUE e
-   ITEM_PRODUTO. N�o incluir na cria��o destas tabelas as chaves prim�ria (PK) e
-   chaves estrangeiras (FK). Substituir todos os tipos de dados INTEGER do modelo
-   por NUMBER.
-
-2) Criar as constraints de chave prim�ria (primary key) para as tabelas associativas.
-
-3) Criar as constraints das chaves estrangeiras (foreing key) para as tabelas associativas.
-*/
 
 DROP TABLE PEDIDO CASCADE CONSTRAINT;
 
@@ -198,20 +170,6 @@ ALTER TABLE ITEM_PRODUTO
 ADD CONSTRAINT FK_ITEM_PEDIDO FOREIGN KEY (NUMERO_PED)
 REFERENCES PEDIDO (NUMERO);
 
-/*
-BD2 - 2o Bim - Atividade de SQL - Exercicios de DDL - Tabelas, Constraints, Indices e
-Sequences do Projeto Pedido - Parte 3
-
-1) Criar uma constraint que garanta que o valor do NUMERO da tabela PEDIDO esteja
-   entre, inclusive, 1 e 99999. O nome da constraint esta no modelo fisico (CK_NUMERO_PEDIDO).
-
-2) Criar os indexes das tabelas PF e PJ (unicos, listas invertidas).
-   Indexes: IND_CNPF_PF e IND_CNPJ_PJ.
-   Constraints de unicidade: UK_PF_CNPF e UK_PJ_CNPJ.
-
-3) Criar uma sequence de nome SEQ_ITEM_ID para o campo CODIGO de ITEM_PRODUTO,
-   com incremento de 2.
-*/
 
 ALTER TABLE PEDIDO
 ADD CONSTRAINT CK_NUMERO_PEDIDO CHECK (NUMERO BETWEEN 1 AND 99999);
@@ -239,11 +197,6 @@ NOCACHE
 NOCYCLE;
 
 
-/*
-BD2 - 2o Bim - Atividade de SQL - Exercicios de DDL - Comentarios em tabelas - Parte 5
-
-1) Criar comentarios para a tabela ITEM_PRODUTO e suas respectivas colunas.
-*/
 
 COMMENT ON TABLE ITEM_PRODUTO IS
 'Tabela associativa que registra os produtos de cada pedido, com quantidade, preco unitario e valor do item';
