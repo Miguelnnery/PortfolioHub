@@ -4,9 +4,9 @@
 
 Este repositório foi desenvolvido para organizar projetos acadêmicos e pessoais utilizando Git e GitHub.
 
-O objetivo é aplicar conceitos de:
+O objetivo é apresentar:
 
-- Versionamento de código;
+- Versionamento de códigos;
 - Organização de projetos;
 - Documentação com README;
 - Publicação utilizando GitHub Pages;
@@ -31,7 +31,8 @@ index.html
 - CSS3
 - Git
 - GitHub
-
+- ORACLE SQL
+- Python
 ---
 
 ## Autor
