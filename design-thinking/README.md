@@ -1,9 +1,7 @@
-#Site sobre Design Thinking
+# Site Design Thinking
 
-#Técnologias
+## Sobre o Site
 
--Desenvolvido utilizando HTML E CSS
+O site discorre sobre o que é o design thinking, quais são as estapas da abordagem, técnicas utilizadas no método e ao final um projeto que em sua criação foi aplicado a abordagem (Design Thinking)
 
-#Descrição
 
-O Site contém o conceito do design thinking, as etapas que compõe o método, algumas técnicas que podem ser utlizadas e um projeto prático desenvolvido usando a abordagem.
